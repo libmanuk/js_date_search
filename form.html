@@ -8,6 +8,9 @@ location.href=url;
 } else if (document.getElementById("year").value && document.getElementById("month").value) {
     var url="/lhl/items/browse?advanced%5B0%5D%5Bjoiner%5D=and&advanced%5B0%5D%5Belement_id%5D=40&advanced%5B0%5D%5Btype%5D=contains&advanced%5B0%5D%5Bterms%5D=&range=&collection=&type=&tags=&featured=&submit_search=Search+for+items&search=" + document.getElementById("year").value + '-' + document.getElementById("month").value + '-';
 location.href=url;
+} else if (document.getElementById("month").value && document.getElementById("day").value) {
+    var url="/lhl/items/browse?advanced%5B0%5D%5Bjoiner%5D=and&advanced%5B0%5D%5Belement_id%5D=40&advanced%5B0%5D%5Btype%5D=contains&advanced%5B0%5D%5Bterms%5D=&range=&collection=&type=&tags=&featured=&submit_search=Search+for+items&search=" + '-' + document.getElementById("month").value + '-' + document.getElementById("day").value;
+location.href=url;
 } else if (document.getElementById("year").value &&  document.getElementById("day").value) {
 document.getElementById("error").innerHTML = "invalid search, please supply a month";
 } else if
